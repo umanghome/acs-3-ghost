@@ -1,2 +1,2 @@
-# acs-2-ghost
+# acs-3-ghost
 Applied CS With Android Week 3: Ghost
