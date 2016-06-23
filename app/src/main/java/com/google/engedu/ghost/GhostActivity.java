@@ -111,7 +111,17 @@ public class GhostActivity extends AppCompatActivity {
 
         });
 
-        onStart(null);
+        // Restore state
+        if (savedInstanceState != null) {
+            text.setText(savedInstanceState.getString("text"));
+            label.setText(savedInstanceState.getString("label"));
+            userTurn = savedInstanceState.getBoolean("userTurn");
+            whoWentFirst = savedInstanceState.getInt("whoWentFirst");
+            challenge.setEnabled(savedInstanceState.getBoolean("challenge"));
+            restart.setEnabled(savedInstanceState.getBoolean("restart"));
+        } else {
+            onStart(null);
+        }
     }
 
     @Override
@@ -253,4 +263,20 @@ public class GhostActivity extends AppCompatActivity {
         return true;
 
     }
+
+    @Override
+    public void onSaveInstanceState (Bundle savedInstanceState) {
+
+        // Save text
+        savedInstanceState.putString("text", text.getText().toString());
+        savedInstanceState.putString("label", label.getText().toString());
+        savedInstanceState.putBoolean("userTurn", userTurn);
+        savedInstanceState.putInt("whoWentFirst", whoWentFirst);
+        savedInstanceState.putBoolean("challenge", challenge.isEnabled());
+        savedInstanceState.putBoolean("restart", restart.isEnabled());
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+
 }
