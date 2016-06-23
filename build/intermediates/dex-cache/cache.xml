@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/umanghome/Documents/Applied CS/acs-3-ghost/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="399fe1774bb379d941321e99ba4a804ee041b59f">
+        <dex dex="/Users/umanghome/Documents/Applied CS/acs-3-ghost/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_32563f9c91f6259b2ffc76683c4e8127f1cf87ef/classes.dex" />
+    </item>
+
+</items>
